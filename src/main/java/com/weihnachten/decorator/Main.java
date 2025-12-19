@@ -21,5 +21,8 @@ public class Main {
 
         PlatinDekor allesDoppelt = new PlatinDekor(soundRamMitDoppelGlitzerUndSchleife);
         System.out.println(allesDoppelt.getBeschreibung()+ ", Preis: "+allesDoppelt.getPreis());
+
+        RabattDekor rabatt = new RabattDekor(allesDoppelt);
+        System.out.println(rabatt.getBeschreibung()+ ", Preis: "+rabatt.getPreis());
     }
 }
