@@ -7,9 +7,11 @@ public class Main {
         Lieferung lieferung = new Lieferung();
         ElternApp papa = new ElternApp("Papa");
         KindApp timmy = new KindApp("Timmy");
+        GrannyApp oma = new GrannyApp(timmy);
 
         lieferung.registerObserver(papa);
         lieferung.registerObserver(timmy);
+        lieferung.registerObserver(oma);
 
         System.out.println("--- Statusänderung 1 ---");
         lieferung.setStatus(GeschenkStatus.VERPACKT);

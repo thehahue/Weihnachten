@@ -15,4 +15,8 @@ public class KindApp implements Observer {
             System.out.println("KindApp (" + name + "): Status-Update: " + status);
         }
     }
+
+    public void sendeGeld() {
+        System.out.println("Danke Oma fürs Geld!");
+    }
 }
