@@ -1,7 +1,7 @@
 package com.weihnachten.decorator;
 
-public class PlatinDecorator extends GeschenkDecorator{
-    public PlatinDecorator(Geschenk geschenk) {
+public class PlatinDekor extends GeschenkDecorator{
+    public PlatinDekor(Geschenk geschenk) {
         super(geschenk);
     }
 

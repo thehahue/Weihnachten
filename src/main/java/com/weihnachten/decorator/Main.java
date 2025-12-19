@@ -19,7 +19,7 @@ public class Main {
         SoundDekor soundRamMitDoppelGlitzerUndSchleife = new SoundDekor(doppelGlitzerRamSchleife);
         System.out.println(soundRamMitDoppelGlitzerUndSchleife.getBeschreibung()+ ", Preis: "+soundRamMitDoppelGlitzerUndSchleife.getPreis());
 
-        PlatinDecorator allesDoppelt = new PlatinDecorator(soundRamMitDoppelGlitzerUndSchleife);
+        PlatinDekor allesDoppelt = new PlatinDekor(soundRamMitDoppelGlitzerUndSchleife);
         System.out.println(allesDoppelt.getBeschreibung()+ ", Preis: "+allesDoppelt.getPreis());
     }
 }
