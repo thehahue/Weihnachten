@@ -11,6 +11,10 @@ public class Main {
         wetterSystem.registerObserver(meinHandy);
         wetterSystem.registerObserver(orf);
         wetterSystem.registerObserver(feuerwehr);
+        javax.swing.SwingUtilities.invokeLater(() -> {
+            WetterDisplay display = new WetterDisplay();
+            wetterSystem.registerObserver(display);
+        });
 
         System.out.println("--- Tag 1: Schönes Wetter ---");
         wetterSystem.setWetterDaten(10.0, 10.0, 1013.0, 0.0);
