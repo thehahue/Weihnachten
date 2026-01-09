@@ -27,11 +27,8 @@ public class Main {
         wetterSystem.removeObserver(meinHandy);
 
         System.out.println("\n--- Tag 4: HITZEWELLE! ---");
-        // Temp > 35 (Schwelle)
         wetterSystem.setWetterDaten(38.0, 5.0, 1015.0, 0.0);
 
-        // Simulator starten (Beispielhaft für 3 Durchläufe, damit das Programm terminiert)
-        // In einer echten Anwendung würde man hier -1 übergeben oder in einem separaten Thread starten.
         WetterSimulator sim = new WetterSimulator(wetterSystem);
         sim.startSimulation(3);
     }
