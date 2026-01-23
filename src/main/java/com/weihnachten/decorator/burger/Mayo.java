@@ -24,4 +24,11 @@ public class Mayo extends BurgerDecorator {
         allergens.add(Allergen.SENF);
         return allergens;
     }
+
+    @Override
+    public java.util.List<String> getImageLayers() {
+        java.util.List<String> layers = tempBurger.getImageLayers();
+        layers.add(layers.size() - 1, "mayo");
+        return layers;
+    }
 }

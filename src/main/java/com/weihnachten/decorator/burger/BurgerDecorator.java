@@ -23,4 +23,9 @@ public abstract class BurgerDecorator implements Burger {
     public Set<Allergen> getAllergens() {
         return tempBurger.getAllergens();
     }
+
+    @Override
+    public java.util.List<String> getImageLayers() {
+        return tempBurger.getImageLayers();
+    }
 }

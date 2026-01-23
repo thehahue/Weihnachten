@@ -14,4 +14,11 @@ public class MeatPatty extends BurgerDecorator {
     public double getPrice() {
         return tempBurger.getPrice() + 2.50;
     }
+
+    @Override
+    public java.util.List<String> getImageLayers() {
+        java.util.List<String> layers = tempBurger.getImageLayers();
+        layers.add(layers.size() - 1, "meat_patty");
+        return layers;
+    }
 }

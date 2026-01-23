@@ -8,4 +8,6 @@ public interface Burger {
     double getPrice();
 
     Set<Allergen> getAllergens();
+
+    java.util.List<String> getImageLayers();
 }

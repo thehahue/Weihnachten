@@ -23,4 +23,11 @@ public class Cheese extends BurgerDecorator {
         allergens.add(Allergen.LAKTOSE);
         return allergens;
     }
+
+    @Override
+    public java.util.List<String> getImageLayers() {
+        java.util.List<String> layers = tempBurger.getImageLayers();
+        layers.add(layers.size() - 1, "cheese");
+        return layers;
+    }
 }
