@@ -9,11 +9,12 @@ public class BurgerShop extends JFrame {
     private Burger currentBurger;
     private JLabel descriptionLabel;
     private JLabel priceLabel;
+    private JLabel allergenLabel;
     private JPanel ingredientPanel;
 
     public BurgerShop() {
         setTitle("Premium Burger Shop");
-        setSize(500, 600);
+        setSize(500, 650);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
@@ -49,11 +50,13 @@ public class BurgerShop extends JFrame {
 
         // Footer for Status
         JPanel footer = new JPanel();
-        footer.setLayout(new GridLayout(3, 1));
+        footer.setLayout(new GridLayout(4, 1));
         footer.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         footer.setBackground(new Color(240, 240, 240));
 
         descriptionLabel = new JLabel("<html><b>Dein Burger:</b> " + currentBurger.getDescription() + "</html>");
+        allergenLabel = new JLabel("<html><b>Allergene:</b> " + currentBurger.getAllergens() + "</html>");
+        allergenLabel.setForeground(Color.RED);
         priceLabel = new JLabel(
                 "<html><b>Gesamtpreis:</b> " + String.format("%.2f", currentBurger.getPrice()) + " €</html>");
         priceLabel.setFont(new Font("Arial", Font.BOLD, 16));
@@ -65,6 +68,7 @@ public class BurgerShop extends JFrame {
             JOptionPane.showMessageDialog(this,
                     "Vielen Dank für deine Bestellung!\n\n" +
                             currentBurger.getDescription() + "\n" +
+                            "Allergene: " + currentBurger.getAllergens() + "\n" +
                             "Preis: " + String.format("%.2f", currentBurger.getPrice()) + " €",
                     "Bestellung OK", JOptionPane.INFORMATION_MESSAGE);
             currentBurger = new BasicBurger();
@@ -72,6 +76,7 @@ public class BurgerShop extends JFrame {
         });
 
         footer.add(descriptionLabel);
+        footer.add(allergenLabel);
         footer.add(priceLabel);
         footer.add(orderBtn);
 
@@ -91,6 +96,7 @@ public class BurgerShop extends JFrame {
 
     private void updateDisplay() {
         descriptionLabel.setText("<html><b>Dein Burger:</b> " + currentBurger.getDescription() + "</html>");
+        allergenLabel.setText("<html><b>Allergene:</b> " + currentBurger.getAllergens() + "</html>");
         priceLabel
                 .setText("<html><b>Gesamtpreis:</b> " + String.format("%.2f", currentBurger.getPrice()) + " €</html>");
     }

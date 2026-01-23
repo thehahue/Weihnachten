@@ -1,5 +1,7 @@
 package com.weihnachten.decorator.burger;
 
+import java.util.Set;
+
 public abstract class BurgerDecorator implements Burger {
     protected Burger tempBurger;
 
@@ -15,5 +17,10 @@ public abstract class BurgerDecorator implements Burger {
     @Override
     public double getPrice() {
         return tempBurger.getPrice();
+    }
+
+    @Override
+    public Set<String> getAllergens() {
+        return tempBurger.getAllergens();
     }
 }
