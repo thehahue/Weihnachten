@@ -90,6 +90,9 @@ public class BurgerShop extends JFrame {
         orderBtn.setFont(new Font("Segoe UI", Font.BOLD, 18));
         orderBtn.setBackground(new Color(46, 204, 113));
         orderBtn.setForeground(Color.WHITE);
+        orderBtn.setOpaque(true);
+        orderBtn.setContentAreaFilled(true);
+        orderBtn.setBorderPainted(false);
         orderBtn.setFocusPainted(false);
         orderBtn.addActionListener(e -> {
             JOptionPane.showMessageDialog(this,
