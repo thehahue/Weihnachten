@@ -61,6 +61,9 @@ public class BurgerShop extends JFrame {
         resetBtn.setFont(new Font("Segoe UI", Font.PLAIN, 14));
         resetBtn.setBackground(new Color(231, 76, 60));
         resetBtn.setForeground(Color.WHITE);
+        resetBtn.setOpaque(true);
+        resetBtn.setContentAreaFilled(true);
+        resetBtn.setBorderPainted(true);
         resetBtn.setFocusPainted(false);
         resetBtn.addActionListener(e -> {
             currentBurger = new BasicBurger();
@@ -92,7 +95,7 @@ public class BurgerShop extends JFrame {
         orderBtn.setForeground(Color.WHITE);
         orderBtn.setOpaque(true);
         orderBtn.setContentAreaFilled(true);
-        orderBtn.setBorderPainted(false);
+        orderBtn.setBorderPainted(true);
         orderBtn.setFocusPainted(false);
         orderBtn.addActionListener(e -> {
             JOptionPane.showMessageDialog(this,
@@ -120,6 +123,9 @@ public class BurgerShop extends JFrame {
         btn.setFont(new Font("Segoe UI", Font.PLAIN, 16));
         btn.setBackground(new Color(52, 152, 219));
         btn.setForeground(Color.WHITE);
+        btn.setOpaque(true);
+        btn.setContentAreaFilled(true);
+        btn.setBorderPainted(true);
         btn.setFocusPainted(false);
         btn.addActionListener(e -> {
             action.run();
