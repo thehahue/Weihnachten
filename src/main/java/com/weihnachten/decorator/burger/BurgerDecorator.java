@@ -20,7 +20,7 @@ public abstract class BurgerDecorator implements Burger {
     }
 
     @Override
-    public Set<String> getAllergens() {
+    public Set<Allergen> getAllergens() {
         return tempBurger.getAllergens();
     }
 }

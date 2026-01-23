@@ -15,9 +15,10 @@ public class BasicBurger implements Burger {
     }
 
     @Override
-    public Set<String> getAllergens() {
-        Set<String> allergens = new HashSet<>();
-        allergens.add("Gluten");
+    public Set<Allergen> getAllergens() {
+        Set<Allergen> allergens = new HashSet<>();
+        allergens.add(Allergen.GLUTEN);
+        allergens.add(Allergen.SESAM);
         return allergens;
     }
 }

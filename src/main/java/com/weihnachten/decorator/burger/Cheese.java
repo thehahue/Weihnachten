@@ -18,9 +18,9 @@ public class Cheese extends BurgerDecorator {
     }
 
     @Override
-    public Set<String> getAllergens() {
-        Set<String> allergens = tempBurger.getAllergens();
-        allergens.add("Milch/Laktose");
+    public Set<Allergen> getAllergens() {
+        Set<Allergen> allergens = tempBurger.getAllergens();
+        allergens.add(Allergen.LAKTOSE);
         return allergens;
     }
 }

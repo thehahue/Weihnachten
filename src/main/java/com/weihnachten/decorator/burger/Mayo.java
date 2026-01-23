@@ -18,10 +18,10 @@ public class Mayo extends BurgerDecorator {
     }
 
     @Override
-    public Set<String> getAllergens() {
-        Set<String> allergens = tempBurger.getAllergens();
-        allergens.add("Ei");
-        allergens.add("Senf");
+    public Set<Allergen> getAllergens() {
+        Set<Allergen> allergens = tempBurger.getAllergens();
+        allergens.add(Allergen.EI);
+        allergens.add(Allergen.SENF);
         return allergens;
     }
 }

@@ -7,5 +7,5 @@ public interface Burger {
 
     double getPrice();
 
-    Set<String> getAllergens();
+    Set<Allergen> getAllergens();
 }

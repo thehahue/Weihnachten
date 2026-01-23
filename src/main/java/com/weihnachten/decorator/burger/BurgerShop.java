@@ -2,8 +2,6 @@ package com.weihnachten.decorator.burger;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class BurgerShop extends JFrame {
     private Burger currentBurger;
