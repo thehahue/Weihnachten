@@ -63,7 +63,7 @@ public class BurgerShop extends JFrame {
         resetBtn.setForeground(Color.WHITE);
         resetBtn.setOpaque(true);
         resetBtn.setContentAreaFilled(true);
-        resetBtn.setBorderPainted(true);
+        resetBtn.setBorderPainted(false);
         resetBtn.setFocusPainted(false);
         resetBtn.addActionListener(e -> {
             currentBurger = new BasicBurger();
@@ -95,7 +95,7 @@ public class BurgerShop extends JFrame {
         orderBtn.setForeground(Color.WHITE);
         orderBtn.setOpaque(true);
         orderBtn.setContentAreaFilled(true);
-        orderBtn.setBorderPainted(true);
+        orderBtn.setBorderPainted(false);
         orderBtn.setFocusPainted(false);
         orderBtn.addActionListener(e -> {
             JOptionPane.showMessageDialog(this,
@@ -125,7 +125,7 @@ public class BurgerShop extends JFrame {
         btn.setForeground(Color.WHITE);
         btn.setOpaque(true);
         btn.setContentAreaFilled(true);
-        btn.setBorderPainted(true);
+        btn.setBorderPainted(false);
         btn.setFocusPainted(false);
         btn.addActionListener(e -> {
             action.run();
